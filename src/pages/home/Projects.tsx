@@ -1,4 +1,5 @@
 import useMediaQuery from "../../hooks/useMediaQuery";
+import { motion } from "framer-motion";
 
 // components
 import { WidgetOutherProject } from "../../components/widgetOutherProject";
@@ -104,17 +105,29 @@ export function Projects() {
             <div className={`flex flex-col justify-center z-30 ${isNonMobileScreens ? "w-3/4" : "w-full"}`}>
                 <TitleSection title="Projetos" itemNumber="03" />
             </div>
+
             <div className={`flex flex-col gap-36 justify-start relative mb-10 ${isNonMobileScreens ? "w-3/4" : "w-full mt-10"}`}>
                 {projectsData.map((item, i) => (
-                    <WidgetProject
-                        key={i + item.id}
-                        id={item.id}
-                        name={item.title}
-                        descript={item.description}
-                        image={item.imageSrc}
-                        link={item.githubLink}
-                        technologies={item.technologies}
-                    />
+                    <motion.div
+                        initial='hidden'
+                        whileInView='visible'
+                        viewport={{ once: true, amount: 0.1 }}
+                        transition={{ delay: i * 0.2 }}
+                        variants={{
+                            hidden: { opacity: 0, y: 80 },
+                            visible: { opacity: 1, y: 0 }
+                        }}
+                    >
+                        <WidgetProject
+                            key={i + item.id}
+                            id={item.id}
+                            name={item.title}
+                            descript={item.description}
+                            image={item.imageSrc}
+                            link={item.githubLink}
+                            technologies={item.technologies}
+                        />
+                    </motion.div>
                 ))}
             </div>
 
@@ -124,15 +137,31 @@ export function Projects() {
                     <div className="h-[1px] bg-primary-100/30 mt-2" />
                 </div>
             </div>
+
             <div className={`grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-4 ${isNonMobileScreens ? "w-3/4" : "w-full mt-10"}`}>
                 {outhersProjectsData.map((item, i) => (
-                    <WidgetOutherProject
-                        key={i + item.id}
-                        name={item.title}
-                        descript={item.description}
-                        link={item.githubLink}
-                        technologies={item.technologies}
-                    />
+                    <motion.div
+                        initial='hidden'
+                        whileInView='visible'
+                        viewport={{ once: true, amount: 0.3 }}
+                        transition={{ delay: i * 0.2 }}
+                        variants={{
+                            hidden: { opacity: 0, y: 80 },
+                            visible: { opacity: 1, y: 0 },
+                        }}
+                        whileHover={{
+                            translateY: -8,
+                            transition: { delay: 0 },
+                        }}
+                        className="h-auto shadow-md bg-primary-700 rounded p-4">
+                        <WidgetOutherProject
+                            key={i + item.id}
+                            name={item.title}
+                            descript={item.description}
+                            link={item.githubLink}
+                            technologies={item.technologies}
+                        />
+                    </motion.div>
                 ))}
             </div>
         </section>

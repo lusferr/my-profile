@@ -38,7 +38,6 @@ export function WidgetProject({ id, image, name, descript, technologies, link }:
                     </div>
                     <div className="flex justify-start gap-4 mt-4">
                         <a href={link} className='cursor-pointer hover:scale-110 text-white hover:text-secondary-100 transition duration-300'><FiGithub /></a>
-                        <div className='cursor-pointer hover:scale-110 text-white hover:text-secondary-100 transition duration-300'><FiExternalLink /></div>
                     </div>
                 </div>
             </div>
@@ -71,8 +70,7 @@ export function WidgetProject({ id, image, name, descript, technologies, link }:
                         ))}
                     </div>
                     <div className="flex justify-end gap-4 mt-4">
-                        <a href={link} className='cursor-pointer hover:scale-110 text-white hover:text-secondary-100 transition duration-300'><FiGithub /></a>
-                        <div className='cursor-pointer hover:scale-110 text-white hover:text-secondary-100 transition duration-300'><FiExternalLink /></div>
+                        <a href={link} target='_blank' className='cursor-pointer hover:scale-110 text-white hover:text-secondary-100 transition duration-300'><FiGithub /></a>
                     </div>
                 </div>
             </div>
@@ -97,8 +95,7 @@ export function WidgetProject({ id, image, name, descript, technologies, link }:
                         ))}
                     </div>
                     <div className="flex justify-start gap-4 mt-4">
-                        <a href={link} className='cursor-pointer hover:scale-110 text-white hover:text-secondary-100 transition duration-300'><FiGithub /></a>
-                        <div className='cursor-pointer hover:scale-110 text-white hover:text-secondary-100 transition duration-300'><FiExternalLink /></div>
+                        <a href={link} target='_blank' className='cursor-pointer hover:scale-110 text-white hover:text-secondary-100 transition duration-300'><FiGithub /></a>
                     </div>
                 </div>
 

@@ -14,7 +14,7 @@ interface WidgetOutherProjectProps {
 
 export function WidgetOutherProject({ technologies, name, descript, link }: WidgetOutherProjectProps) {
     return (
-        <a href={link} target='_blank' className="flex flex-col gap-4 w-full h-auto shadow bg-primary-700 rounded p-4 group cursor-pointer hover:shadow-lg hover:-translate-y-2 transition duration-500">
+        <a href={link} target='_blank' className="flex flex-col gap-4 group">
             <div className="flex justify-between items-center  text-primary-100">
                 <div className='cursor-pointer text-secondary-100 hover:text-secondary-100 transition duration-300'><GoFileDirectory size={30} /></div>
                 <a href={link} className='cursor-pointer hover:scale-110 text-white hover:text-secondary-100 transition duration-300'><FiGithub /></a>

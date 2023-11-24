@@ -6,9 +6,6 @@ import { Projects } from "./Projects";
 
 
 export function Home() {
-
-
-
     return (
         <div className="flex flex-col justify-center items-center">
             <Presentation />

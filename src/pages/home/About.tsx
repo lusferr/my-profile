@@ -1,6 +1,7 @@
 import perfil from "../../assets/foto-perfil.png";
 import { TitleSection } from "../../components/titleSection";
 import useMediaQuery from "../../hooks/useMediaQuery";
+import { motion } from "framer-motion";
 
 export function About() {
     const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");
@@ -15,9 +16,18 @@ export function About() {
         { name: "Git" },
     ];
     return (
-        // ADICONAR UM MAX WIDTH AS MINHAS section
         <section id="About" className={`min-h-[90vh] flex flex-col justify-center items-center ${isNonMobileScreens ? "px-8" : "px-4"} max-w-[1200px]`}>
-            <div className={`flex flex-col justify-center ${isNonMobileScreens ? "w-3/4" : "w-full"}`}>
+            <motion.div
+                initial='hidden'
+                whileInView='visible'
+                viewport={{ once: true, amount: 0.1 }}
+                transition={{ delay: 0.5 }}
+                variants={{
+                    hidden: { opacity: 0, y: 30 },
+                    visible: { opacity: 1, y: 0 }
+                }}
+                className={`flex flex-col justify-center ${isNonMobileScreens ? "w-3/4" : "w-full"}`}
+            >
                 <TitleSection title="Sobre mim" itemNumber="01" />
 
                 <div className={`flex justify-between gap-8 ${!isSmallScreens && "flex-col items-center"}`}>
@@ -49,7 +59,7 @@ export function About() {
                     </div>
                     {/* FINAL MINHA IMAGEM */}
                 </div>
-            </div>
+            </motion.div>
         </section>
     )
 }
