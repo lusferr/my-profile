@@ -1,4 +1,4 @@
-import { FiGithub, FiExternalLink } from 'react-icons/fi';
+import { FiGithub } from 'react-icons/fi';
 import useMediaQuery from '../hooks/useMediaQuery';
 
 interface technology {
@@ -19,7 +19,7 @@ export function WidgetProject({ id, image, name, descript, technologies, link }:
 
     if (!isMediumScreens) {
         return (
-            <div className='flex justify-center items-center group p-4 bg-primary-700/70 group shadow'>  
+            <div className='flex justify-center items-center group p-4 bg-primary-700/70 group shadow'>
                 <img src={image} alt="foto do projeto" className='w-full h-auto absolute rounded opacity-20 group-hover:opacity-60 transition duration-500' />
                 <div className="w-full flex flex-col gap-2 z-30">
                     <div className="text-start mb-2 shadow rounded bg-primary-800/70 group-hover:bg-primary-800/40 p-4">
