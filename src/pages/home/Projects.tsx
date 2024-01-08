@@ -16,7 +16,7 @@ export function Projects() {
             title: "Social",
             description: "Projeto fullstack de uma rede social aonde é possivel adicionar amigos, ver e curtir publicações e detalhes de outros perfis.",
             technologies: [{ name: "React" }, { name: "TypeScript" }, { name: "Material UI" }, { name: "Node" }, { name: "MongoDB" }, { name: "Express" },],
-            githubLink: "https://github.com/lusferr/upload-ia",
+            githubLink: "https://github.com/lusferr/mern-social-app",
         },
         {
             id: 2,
@@ -59,21 +59,21 @@ export function Projects() {
             title: "Mobile ToDo List",
             description: "Uma lista de afazeres para dispositivos mobile.",
             technologies: [{ name: "Flutter" }],
-            githubLink: "https://github.com/lusferr/projeto-pokedex-mapadev-week",
+            githubLink: "https://github.com/lusferr/todo_list",
         },
         {
             id: 1,
             title: "CRUD Nodejs",
             description: "Simples CRUD utilizando Nodejs",
             technologies: [{ name: "Node js" }, { name: "MySql" }, { name: "Express" },],
-            githubLink: "https://github.com/lusferr/projeto-pokedex-mapadev-week",
+            githubLink: "https://github.com/lusferr/api-node-crud",
         },
         {
             id: 1,
             title: "Body Calculator",
             description: "Aplicativo mobile para calcular o IMC (Índice de massa corporal)",
             technologies: [{ name: "Flutter" }],
-            githubLink: "https://github.com/lusferr/projeto-pokedex-mapadev-week",
+            githubLink: "https://github.com/lusferr/body_calculator",
         },
         {
             id: 1,
@@ -87,14 +87,14 @@ export function Projects() {
             title: "Validação de formulários",
             description: "Validação de um formulario simples utilizando Formik + Yup.",
             technologies: [{ name: "React" }, { name: "Formik" }, { name: "Yup" }],
-            githubLink: "https://github.com/lusferr/projeto-pokedex-mapadev-week",
+            githubLink: "https://github.com/lusferr/fomik-yup",
         },
         {
             id: 3,
             title: "ToDo List",
             description: "Meu primeiro projeto utilizando react, para criar e editar uma lista de afazeres",
             technologies: [{ name: "React" }],
-            githubLink: "https://github.com/lusferr/projeto-pokedex-mapadev-week",
+            githubLink: "https://github.com/lusferr/todoList",
         },
     ];
 
