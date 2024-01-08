@@ -1,6 +1,7 @@
 import { FiGithub, FiLinkedin } from 'react-icons/fi';
 import useMediaQuery from '../hooks/useMediaQuery';
 
+
 export function Footer() {
     const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");
 

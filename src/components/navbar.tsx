@@ -3,6 +3,9 @@ import useMediaQuery from "../hooks/useMediaQuery";
 import { BiMenuAltRight } from 'react-icons/bi';
 import { MdOutlineClose } from 'react-icons/md';
 
+// cv pdf
+import my_cv from '../assets/my_cv.pdf';
+
 export function Navbar() {
     const links = [
         { name: "Sobre", route: "#About" },
@@ -36,6 +39,15 @@ export function Navbar() {
                                     </a>
                                 </li>
                             ))}
+                            <li>
+                                <button className="hover:scale-110 transition duration-500">
+                                    <a
+                                        href={my_cv}
+                                        className="py-1 px-2 border-2 border-secondary-100 rounded text-secondary-100 hover:text-primary-100 font-semibold transition duration-500">
+                                        Currículo
+                                    </a>
+                                </button>
+                            </li>
                         </ul>
                     </div>
                 )
@@ -68,6 +80,15 @@ export function Navbar() {
                                         </a>
                                     </li>
                                 ))}
+                                <li>
+                                    <button className="hover:scale-110 transition duration-500">
+                                        <a
+                                            href={my_cv}
+                                            className="py-1 px-2 border-2 border-secondary-100 rounded text-secondary-100 hover:text-primary-100 font-semibold transition duration-500">
+                                            Currículo
+                                        </a>
+                                    </button>
+                                </li>
                             </ul>
                         </div>
                     </div>
